@@ -1,0 +1,28 @@
+p {
+    font-family: "Roboto", serif;
+    color: #f3f3;
+    margin: 10px;
+}
+
+#table-tarefa, td {
+    border: 0.5px solid #c3c3c3;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+#table-tarefa td {
+    padding: 5px;
+}
+
+.btn-remover {
+    padding: 5px;
+    background-color: #a10808;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-remover:hover {
+    background-color: #530202;
+}

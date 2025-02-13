@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <p>Parágrafo</p>
+    <img src="img/If3xWycz_400x400.jpg" alt="Logo do Senac"/>
+    <a href="https://www.pr.senac.br" target="_blank">Site Senac</a>
+    <button onclick="mudarCor()">Mudar Cor</button>
+
+    <form id="formExercicio">
+        <div>
+            <div>
+                <label>Nome: </label>
+                <input type="text" name="nome" id="nome"/>
+            </div>
+            <div>
+                <label>E-mail: </label>
+                <input type="email" name="email" id="email"/>
+            </div>
+            <div>
+                <label>Data Nascimento: </label>
+                <input type="date" name="dataNascimento" id="dataNascimento"/>
+            </div>
+            <div>
+                <input type="submit" value="Enviar"/>
+            </div>
+        </div>
+    </form>
+<hr>
+    <form id="formTarefa">
+        <div>
+            <div>
+                <label>Tarefa: </label>
+                <input type="text" name="tarefa" id="tarefa"/>
+            </div>
+            <div>
+                <input type="submit" value="Adicionar"/>
+            </div>
+        </div>
+    </form>
+
+
+    <div id="listaTarefa">
+        <ul>
+            
+        </ul>
+    </div>
+</body>
+</html>
