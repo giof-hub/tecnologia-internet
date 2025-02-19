@@ -33,31 +33,13 @@ window.onload = function(){
         adicionarTarefa();
     });
 
-    document.addEventListener("click", function(e){
-        if(e.target.className == 'remover'){
-          var id = e.target.getAttribute('data-id');
-
-          document.getElementById(id).remove();
-        }
-    });
-
     function adicionarTarefa() {
         var tarefa = document.getElementById('tarefa').value;
-    
-        var id = 'tarefa-' + Date.now();
 
-        var registro = `<li id="${id}">${tarefa} <button class="remover" data-id="${id}" class="btn-remover">X</button></li>`;
+        var registro = `<li>${tarefa} <button class="remover" onclick="this.parentNode.remove()" class="btn-remover">X</button></li>`;
     
         var lista = document.querySelector('#listaTarefa > ul');
-
-        console.log(lista);
     
         lista.innerHTML = lista.innerHTML + registro;
-    }
-    
-    function removerTarefa(idTarefa) {
-    
-        document.getElementById(idTarefa).remove();
-    
     }
 }
