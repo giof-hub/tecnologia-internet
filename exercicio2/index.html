@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+    <div class="main">
+        <div class="content">
+            <div class="formulario">
+                <div>
+                    <input type="text" name="cep" id="inputCep" placeholder="CEP"/>
+                    <div class="line"></div>
+                </div>
+                <button onclick="buscarCep()">Buscar CEP</button>
+            </div>
+
+            <div class="main-result">
+                <div class="result">
+                    <div>
+                        <label>CEP:</label><span id="cep"></span>
+                    </div>
+                    <div>
+                        <label>Logradouro:</label><span id="logradouro"></span>
+                    </div>
+                    <div>
+                        <label>Complemento:</label><span id="complemento"></span>
+                    </div>
+                    <div>
+                        <label>Unidade:</label><span id="unidade"></span>
+                    </div>
+                    <div>
+                        <label>Bairro:</label><span id="bairro"></span>
+                    </div>
+                    <div>
+                        <label>Localidade:</label><span id="localidade"></span>
+                    </div>
+                </div>
+                <div class="spacer">
+
+                </div>
+                <div class="result">
+                    <div>
+                        <label>UF:</label><span id="uf"></span>
+                    </div>
+                    <div>
+                        <label>Estado:</label><span id="estado"></span>
+                    </div>
+                    <div>
+                        <label>Região:</label><span id="regiao"></span>
+                    </div>
+                    <div>
+                        <label>IBGE:</label><span id="ibge"></span>
+                    </div>
+                    <div>
+                        <label>Gia:</label><span id="gia"></span>
+                    </div>
+                    <div>
+                        <label>DDD:</label><span id="ddd"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
