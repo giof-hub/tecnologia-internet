@@ -1,6 +1,14 @@
-function buscarCep() {
-    //https://viacep.com.br/ws/72870344/json/
+window.onload = () => {
+    document.getElementById('logradouro').value = '';
+    document.getElementById('complemento').value = '';
+    document.getElementById('bairro').value = '';
+    document.getElementById('cidade').value = '';
+    document.getElementById('estado').value = '';
+    document.getElementById('numero').value = '';
+};
 
+
+function buscarCep() {
     var url = 'https://viacep.com.br/ws/';
 
     var cep = document.getElementById('inputCep').value;
@@ -9,18 +17,11 @@ function buscarCep() {
         fetch(`${url}${cep}/json`)
             .then((response) => response.json())
             .then((dados) => {
-                document.getElementById('cep').innerHTML = dados.cep;
-                document.getElementById('logradouro').innerHTML = dados.logradouro;
-                document.getElementById('complemento').innerHTML = dados.complemento;
-                document.getElementById('unidade').innerHTML = dados.unidade;
-                document.getElementById('bairro').innerHTML = dados.bairro;
-                document.getElementById('localidade').innerHTML = dados.localidade;
-                document.getElementById('uf').innerHTML = dados.uf;
-                document.getElementById('estado').innerHTML = dados.estado;
-                document.getElementById('regiao').innerHTML = dados.regiao;
-                document.getElementById('ibge').innerHTML = dados.ibge;
-                document.getElementById('gia').innerHTML = dados.gia;
-                document.getElementById('ddd').innerHTML = dados.ddd;
+                document.getElementById('logradouro').value = dados.logradouro;
+                document.getElementById('complemento').value = dados.complemento;
+                document.getElementById('bairro').value = dados.bairro;
+                document.getElementById('cidade').value = dados.localidade;
+                document.getElementById('estado').value = dados.estado;
             })
             .catch((error) => alert(`Houve um erro na requisição: ${error}`));
     } else {

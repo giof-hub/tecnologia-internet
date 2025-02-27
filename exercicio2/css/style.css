@@ -8,11 +8,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
+    background-color: rgb(248, 248, 248);
 }
 
 button {
@@ -34,7 +30,7 @@ button {
     margin-top: 3px;
 }
 
-input {
+#inputCep {
     border: none;
     outline: none;
 }
@@ -70,4 +66,40 @@ span {
 
 .spacer {
     width: 50px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(185, 185, 185);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(119, 119, 119);
+}
+
+.input-group input {
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    outline: none;
+}
+
+.input-group input:focus {
+    outline: solid rgba(168, 168, 168, 0.5);
+}
+
+.input-group label {
+    
 }
