@@ -3,20 +3,16 @@ window.onload = () => {
 };
 
 
-function buscarCep() {
-    var url = 'https://viacep.com.br/ws/';
+function getJoker() {
+    var url = 'https://api.chucknorris.io/jokes/random?category=';
 
-    var cep = document.getElementById('inputCep').value;
+    var categorie = document.getElementById('select-categories').value;
 
-    if (cep != '') {
-        fetch(`${url}${cep}/json`)
+    if (categorie != '') {
+        fetch(`${url}${categorie}`)
             .then((response) => response.json())
             .then((dados) => {
-                document.getElementById('logradouro').value = dados.logradouro;
-                document.getElementById('complemento').value = dados.complemento;
-                document.getElementById('bairro').value = dados.bairro;
-                document.getElementById('cidade').value = dados.localidade;
-                document.getElementById('estado').value = dados.estado;
+                document.getElementById("joker").innerHTML = `<span>${dados['value']}</span>`;
             })
             .catch((error) => alert(`Houve um erro na requisição: ${error}`));
     } else {
